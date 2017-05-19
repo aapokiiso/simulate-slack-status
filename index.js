@@ -93,6 +93,10 @@ async function getStatusEmoji() {
         console.error(e);
     }
 
+    // Remove weird unsupported emojis
+    const isValidEmoji = /^:[a-zA-Z0-9_]+:$/;
+    emojis = emojis.filter(emoji => emoji.match(isValidEmoji));
+
     // Return random emoji
     const i = Math.floor(Math.random() * emojis.length);
 
