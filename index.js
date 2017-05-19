@@ -44,14 +44,32 @@ async function getStatusText() {
         console.error(e);
     }
 
+    // Remove cruft
     hotPosts = hotPosts['data']['children'];
-    const postsData = hotPosts.map(hotPost => hotPost.data);
+    hotPosts = hotPosts.map(hotPost => hotPost.data);
 
-    const hotTextPost = postsData
+    let hotTextPosts = hotPosts
         .filter(post => !post['stickied']) // Ignore stickied posts
-        .find(post => post['selftext'] && post['selftext'].length); // Get first text post
+        .filter(post => post['selftext'] && post['selftext'].length); // Ignore image posts (no context in Slack)
 
-    return hotTextPost['title'];
+    // Optional subreddit filtering
+    const subreddit = process.env.SUBREDDIT;
+    if (subreddit) {
+        const regex = new RegExp('^' + subreddit + '[_-]+SS$', 'i');
+        hotTextPosts = hotTextPosts.filter(post => {
+            console.log(post.author, post.author.match(regex))
+            return post.author.match(regex);
+        });
+    }
+
+    // Select random post
+    let hotTextPost;
+    if (hotTextPosts.length) {
+        const i = Math.floor(Math.random() * hotTextPosts.length);
+        hotTextPost = hotTextPosts[i];
+    }
+
+    return hotTextPost ? hotTextPost['title'] : '';
 }
 
 async function getStatusEmoji() {
