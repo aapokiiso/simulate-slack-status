@@ -25,7 +25,7 @@ async function getStatusText() {
     let hotPosts = [];
     try {
         hotPosts = await new Promise((resolve, reject) => {
-            request('https://www.reddit.com/r/subredditsimulator/hot.json', (err, res, body) => {
+            request('https://www.reddit.com/r/SubredditSimulator/hot.json', (err, res, body) => {
                 if (err) {
                     return reject(err);
                 }
@@ -76,6 +76,7 @@ async function getStatusEmoji() {
         console.error(e);
     }
 
+    // Return random emoji
     const i = Math.floor(Math.random() * emojis.length);
 
     return emojis[i];
