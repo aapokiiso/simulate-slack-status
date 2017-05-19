@@ -57,7 +57,6 @@ async function getStatusText() {
     if (subreddit) {
         const regex = new RegExp('^' + subreddit + '[_-]+SS$', 'i');
         hotTextPosts = hotTextPosts.filter(post => {
-            console.log(post.author, post.author.match(regex))
             return post.author.match(regex);
         });
     }
