@@ -1,0 +1,12 @@
+{
+  "name": "slack-simulate-status",
+  "version": "1.0.0",
+  "description": "Update Slack status from Subreddit Simulator",
+  "main": "index.js",
+  "author": "Aapo Kiiso <aapo@kii.so>",
+  "dependencies": {
+    "emojis-keywords": "^2.0.0",
+    "request": "^2.81.0",
+    "slack": "^8.3.1"
+  }
+}
