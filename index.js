@@ -11,15 +11,32 @@ if (!authToken) {
 
 Promise.all([getStatusText(), getStatusEmoji()])
     .then(([statusText, statusEmoji]) => {
-        slack.users.profile.set({token: authToken, profile: {
-            'status_text': statusText,
-            'status_emoji': statusEmoji
-        }}, err => {
-            if (err) {
-                console.error(err);
-            }
-        });
+        return setStatus(statusText, statusEmoji);
     });
+
+async function setStatus(text, emoji) {
+    try {
+        await new Promise((resolve, reject) => {
+            slack.users.profile.set({token: authToken, profile: {
+                'status_text': text,
+                'status_emoji': emoji
+            }}, async err => {
+                if (err) {
+                    // Retry until a valid emoji is found
+                    if (err.message == 'profile_status_set_failed_not_valid_emoji') {
+                        const newEmoji = await getStatusEmoji();
+                        await setStatus(text, newEmoji);
+                    } else {
+                        return reject(err);
+                    }
+                }
+                return resolve();
+            });
+        });
+    } catch (e) {
+        console.error(e);
+    }
+}
 
 async function getStatusText() {
     const postsToFind = 50; // Find a nice pool of status text candidates
