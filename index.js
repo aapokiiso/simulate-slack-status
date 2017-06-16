@@ -133,7 +133,7 @@ async function getStatusEmoji() {
     }
 
     // Remove weird unsupported emojis
-    const isValidEmoji = /^:[a-zA-Z0-9_]+:$/;
+    const isValidEmoji = /^:[a-zA-Z0-9_-]+:$/;
     emojis = emojis.filter(emoji => emoji.match(isValidEmoji));
 
     // Return random emoji
