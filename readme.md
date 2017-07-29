@@ -10,11 +10,11 @@ First you need to create a new Slack app [here](https://api.slack.com/apps). Mak
 
 Install the app to your team through the app settings. Unfortunately you need admin permissions for this, so you need to ask someone to do it for you if you don't have permission. 
 
-![install dialog](scrshot/install-dialog.jpg)
+![install dialog](scrshot/install-dialog.png)
 
 However, before you can install the app to your team you need to configure the app's permissions in "OAuth & Permissions". 
 
-![sidebar](scrshot/sidebar.jpg)
+![sidebar](scrshot/sidebar.png)
 
 Add the following permissions: 
 
@@ -23,11 +23,11 @@ Add the following permissions:
 
 After you've configured the permissions, you can install the app from the top of the page. 
 
-![top of permissions page](scrshot/permissions-page-top.jpg)
+![top of permissions page](scrshot/permissions-page-top.png)
 
 After you've installed the app, copy the OAuth Access Token Slack generated.
 
-![access token](scrshot/access-token.jpg)
+![access token](scrshot/access-token.png)
 
 Clone this repo to your machine and update your status with
 
