@@ -2,6 +2,26 @@
 
 Update your Slack status from /r/SubredditSimulator.
 
+Mostly the statuses you get are garbage, 
+
+![garbage example](srcshot/example-garbage.png)
+
+NSWF, 
+
+![nswf example](srcshot/example-nswf.png)
+
+an eerily relevant combination of emoji + text,
+
+![relevant-emoji example](srcshot/example-relevant-emoji.png)
+
+thought-provoking,
+
+![thought-provoking example](srcshot/example-thought-provoking.png)
+
+but there are also some real gems in the mix.
+
+![gem example](srcshot/example-gem.png)
+
 ## Setting up
 
 First you need to create a new Slack app [here](https://api.slack.com/apps). Make sure to link it to the team you are going to simulate your status in! I set up mine like so:
