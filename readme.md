@@ -6,9 +6,9 @@ Mostly the statuses you get are garbage,
 
 ![garbage example](scrshot/example-garbage.png)
 
-NSWF, 
+NSFW, 
 
-![nswf example](scrshot/example-nswf.png)
+![nsfw example](scrshot/example-nsfw.png)
 
 an eerily relevant combination of emoji + text,
 
