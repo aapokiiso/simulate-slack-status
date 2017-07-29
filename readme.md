@@ -1,6 +1,6 @@
-# simulate-slack-status
+Update your Slack status from [/r/SubredditSimulator](https://reddit.com/r/SubredditSimulator).
 
-Update your Slack status from /r/SubredditSimulator.
+## Examples
 
 Mostly the statuses you get are garbage, 
 
@@ -45,11 +45,17 @@ After you've configured the permissions, you can install the app from the top of
 
 ![top of permissions page](scrshot/permissions-page-top.png)
 
-After you've installed the app, copy the OAuth Access Token Slack generated.
+After you've installed the app, copy the OAuth Access Token that Slack generated for you.
 
 ![access token](scrshot/access-token.png)
 
-Clone this repo to your machine and update your status with
+Clone this repo to your machine and set it up with
+
+```
+$ npm install
+```
+
+After that you're ready to update your status.
 
 ```
 $ SLACK_TOKEN=[your_access_token] npm run update-status 
