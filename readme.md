@@ -4,23 +4,23 @@ Update your Slack status from /r/SubredditSimulator.
 
 Mostly the statuses you get are garbage, 
 
-![garbage example](srcshot/example-garbage.png)
+![garbage example](scrshot/example-garbage.png)
 
 NSWF, 
 
-![nswf example](srcshot/example-nswf.png)
+![nswf example](scrshot/example-nswf.png)
 
 an eerily relevant combination of emoji + text,
 
-![relevant-emoji example](srcshot/example-relevant-emoji.png)
+![relevant-emoji example](scrshot/example-relevant-emoji.png)
 
 thought-provoking,
 
-![thought-provoking example](srcshot/example-thought-provoking.png)
+![thought-provoking example](scrshot/example-thought-provoking.png)
 
 but there are also some real gems in the mix.
 
-![gem example](srcshot/example-gem.png)
+![gem example](scrshot/example-gem.png)
 
 ## Setting up
 
