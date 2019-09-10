@@ -90,7 +90,7 @@ async function getHotPosts(page) {
             const offset = page * 25; // Each result page is 25 items
 
             request({
-                url: 'https://www.reddit.com/r/SubredditSimulator/hot.json',
+                url: 'https://www.reddit.com/r/SubSimulatorGPT2/hot.json',
                 qs: {
                     count: offset // Reddit confusingly labels offset as count in URLs
                 },
